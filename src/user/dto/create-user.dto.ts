@@ -17,10 +17,10 @@ export class CreateUserDto extends loginUserDto  {
     email:string;
 
     @IsNotEmpty()
-    @Length(5, 16)
-    password:string; 
-
-    @IsNotEmpty()
     @IsString()
     role:string;
+
+    @IsNotEmpty()
+    @Length(5, 16)
+    password:string; 
 }

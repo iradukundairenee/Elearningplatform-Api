@@ -19,8 +19,14 @@ export class Course extends BaseEntity{
     @Column({ default: null })
     public Image:string
 
-    @ManyToOne(()=>User,user=> user.id)
-    @JoinTable()
-    public User:User[]
+    @Column({ default: null })
+    public Amount:string
+
+    @Column({default: 0})
+    public confirmed: number
+
+    @ManyToOne(type => User,user=> user.courses) user:User;
+    // @JoinTable()
+    // public User:User[]
 
 }

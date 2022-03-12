@@ -16,6 +16,16 @@ export class CreateCourseDto {
     @IsString()
     Content:string
   
+    @IsNotEmpty()
+    @IsString()
+    Amount:string
+
+    @IsNotEmpty()
+    @IsString()
+    confirmed:number
+
+
+
    
 
 }
